@@ -37,6 +37,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 60px;display:fl
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:60px 60px;opacity:.28;pointer-events:none;}
 .hi{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:center;}
 
+/* ── GLOBE CANVAS ── */
+#globe-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:all;}
+
 /* hero left */
 .hbadge{display:inline-flex;align-items:center;gap:8px;padding:5px 15px;border:1px solid var(--rule);border-radius:99px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:22px;font-family:monospace;}
 .pdot{width:7px;height:7px;border-radius:50%;background:var(--G);flex-shrink:0;box-shadow:0 0 0 3px rgba(34,197,94,.2);}
@@ -334,6 +337,7 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
 
 <!-- HERO -->
 <section id="hero">
+  <canvas id="globe-canvas"></canvas>
   <div class="hmesh"></div>
   <div class="hgrid"></div>
   <div class="hi">
@@ -348,7 +352,6 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
         <a href="https://linkedin.com/in/adityaroy2002" target="_blank" class="hcl"><span class="hci">💼</span>linkedin.com/in/adityaroy2002</a>
         <a href="https://github.com/parth-roy" target="_blank" class="hcl"><span class="hci">🔗</span>github.com/parth-roy</a>
         <a href="https://calendly.com/adityaroy83061/new-meeting" target="_blank" style="position:fixed;bottom:90px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;padding:12px 22px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;box-shadow:0 4px 20px rgba(99,102,241,0.5);white-space:nowrap;">📅 Book a Free Call</a>
-
         <a href="https://wa.me/919331488999?text=Hello%20Aditya,%20I%20found%20your%20professional%20website%20services%20through%20LinkedIn%20and%20would%20like%20to%20connect%20regarding%20website%20development.%20Kindly%20share%20more%20details." target="_blank" class="hcl"><span class="hci" style="background:#E6F9EE;border-color:#b6ecd0">💬</span>WhatsApp — Chat Now</a>
       </div>
       <div class="hbtns">
@@ -443,16 +446,11 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
         </div>
       </div>
     </div>
-  </div><!-- LinkedIn Badge -->
-          <div 
-            class="badge-base LI-profile-badge" 
-            data-locale="en_US" 
-            data-size="medium" 
-            data-theme="dark" 
-            data-type="VERTICAL" 
-            data-vanity="adityaroy2002" 
-            data-version="v1">
-          </div>
+  </div>
+  <!-- LinkedIn Badge -->
+  <div style="display:flex;justify-content:center;padding-bottom:40px;">
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="adityaroy2002" data-version="v1"></div>
+  </div>
 </section>
 
 <div class="divr"></div>
@@ -578,266 +576,92 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
       </div>
     </div>
     <div class="pcards" id="pcardsGrid">
-
-      <!-- Basic Portfolio -->
       <div class="prc" data-cat="portfolio" data-inr="2,999" data-usd="36" data-eur="33" data-gbp="29">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--AL);color:var(--A)">Portfolio</div>
-          <div class="prname">Basic Portfolio</div>
-          <div class="prdesc">Starter website for individuals &amp; freelancers</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--AL);color:var(--A)">Portfolio</div><div class="prname">Basic Portfolio</div><div class="prdesc">Starter website for individuals &amp; freelancers</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>2,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 3–5 Days Delivery</div>
-        <ul class="prfl">
-          <li>1-page responsive website</li>
-          <li>Mobile-first design</li>
-          <li>Contact form integration</li>
-          <li>WhatsApp chat button</li>
-          <li>Basic SEO setup</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 3–5 Days Delivery</div>
+        <ul class="prfl"><li>1-page responsive website</li><li>Mobile-first design</li><li>Contact form integration</li><li>WhatsApp chat button</li><li>Basic SEO setup</li></ul>
         <a href="#contact" class="prcta" data-svc="Basic Portfolio Website">Get Started →</a>
       </div>
-
-      <!-- Professional Portfolio -->
       <div class="prc feat" data-cat="portfolio" data-inr="4,999" data-usd="60" data-eur="56" data-gbp="48">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--AL);color:var(--A)">Portfolio</div>
-          <div class="prname">Professional Portfolio</div>
-          <div class="prdesc">Premium multi-page portfolio with advanced features</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--AL);color:var(--A)">Portfolio</div><div class="prname">Professional Portfolio</div><div class="prdesc">Premium multi-page portfolio with advanced features</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>4,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 5–7 Days Delivery</div>
-        <ul class="prfl">
-          <li>Up to 5 pages</li>
-          <li>Premium custom design</li>
-          <li>SEO optimized &amp; fast loading</li>
-          <li>Contact form + WhatsApp</li>
-          <li>Google Analytics setup</li>
-          <li>Social media integration</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 5–7 Days Delivery</div>
+        <ul class="prfl"><li>Up to 5 pages</li><li>Premium custom design</li><li>SEO optimized &amp; fast loading</li><li>Contact form + WhatsApp</li><li>Google Analytics setup</li><li>Social media integration</li></ul>
         <a href="#contact" class="prcta" data-svc="Professional Portfolio Website">Get Started →</a>
       </div>
-
-      <!-- Doctor / CA Pro -->
       <div class="prc" data-cat="professional" data-inr="7,999" data-usd="96" data-eur="89" data-gbp="76">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--TL);color:var(--T)">Professional</div>
-          <div class="prname">Doctor / CA Pro Website</div>
-          <div class="prdesc">Tailored for doctors, CAs, lawyers &amp; consultants</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--TL);color:var(--T)">Professional</div><div class="prname">Doctor / CA Pro Website</div><div class="prdesc">Tailored for doctors, CAs, lawyers &amp; consultants</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>7,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 7–10 Days Delivery</div>
-        <ul class="prfl">
-          <li>Premium professional design</li>
-          <li>Appointment booking form</li>
-          <li>WhatsApp chat integration</li>
-          <li>Full SEO optimization</li>
-          <li>Testimonials &amp; credentials section</li>
-          <li>Google Maps integration</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 7–10 Days Delivery</div>
+        <ul class="prfl"><li>Premium professional design</li><li>Appointment booking form</li><li>WhatsApp chat integration</li><li>Full SEO optimization</li><li>Testimonials &amp; credentials section</li><li>Google Maps integration</li></ul>
         <a href="#contact" class="prcta" data-svc="Doctor / CA Pro Website">Get Started →</a>
       </div>
-
-      <!-- Business Website -->
       <div class="prc feat" data-cat="business" data-inr="9,999" data-usd="120" data-eur="111" data-gbp="95">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--SL);color:var(--S)">Business</div>
-          <div class="prname">Business Website</div>
-          <div class="prdesc">Complete business presence with advanced functionality</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--SL);color:var(--S)">Business</div><div class="prname">Business Website</div><div class="prdesc">Complete business presence with advanced functionality</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>9,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 10–14 Days Delivery</div>
-        <ul class="prfl">
-          <li>Up to 8 pages</li>
-          <li>Premium UI/UX design</li>
-          <li>Full SEO optimization</li>
-          <li>Inquiry forms &amp; WhatsApp</li>
-          <li>CMS integration</li>
-          <li>Performance optimized</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 10–14 Days Delivery</div>
+        <ul class="prfl"><li>Up to 8 pages</li><li>Premium UI/UX design</li><li>Full SEO optimization</li><li>Inquiry forms &amp; WhatsApp</li><li>CMS integration</li><li>Performance optimized</li></ul>
         <a href="#contact" class="prcta" data-svc="Business Website">Get Started →</a>
       </div>
-
-      <!-- E-Commerce Starter -->
       <div class="prc" data-cat="business" data-inr="14,999" data-usd="181" data-eur="167" data-gbp="143">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--SL);color:var(--S)">Business</div>
-          <div class="prname">E-Commerce Starter</div>
-          <div class="prdesc">Launch your online store with essential e-commerce features</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--SL);color:var(--S)">Business</div><div class="prname">E-Commerce Starter</div><div class="prdesc">Launch your online store with essential e-commerce features</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>14,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 2–3 Weeks Delivery</div>
-        <ul class="prfl">
-          <li>Product catalog &amp; cart</li>
-          <li>Payment gateway integration</li>
-          <li>Order management system</li>
-          <li>Mobile responsive design</li>
-          <li>SEO &amp; performance optimized</li>
-          <li>Admin dashboard</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 2–3 Weeks Delivery</div>
+        <ul class="prfl"><li>Product catalog &amp; cart</li><li>Payment gateway integration</li><li>Order management system</li><li>Mobile responsive design</li><li>SEO &amp; performance optimized</li><li>Admin dashboard</li></ul>
         <a href="#contact" class="prcta" data-svc="E-Commerce Website">Get Started →</a>
       </div>
-
-      <!-- SaaS MVP -->
       <div class="prc" data-cat="saas" data-inr="49,999" data-usd="599" data-eur="555" data-gbp="476">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div>
-          <div class="prname">SaaS MVP</div>
-          <div class="prdesc">Validate your SaaS idea with a minimum viable product</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div><div class="prname">SaaS MVP</div><div class="prdesc">Validate your SaaS idea with a minimum viable product</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>49,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 4–6 Weeks Delivery</div>
-        <ul class="prfl">
-          <li>User authentication &amp; roles</li>
-          <li>Core feature development</li>
-          <li>Dashboard &amp; analytics</li>
-          <li>Payment / subscription integration</li>
-          <li>REST API architecture</li>
-          <li>Cloud deployment setup</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 4–6 Weeks Delivery</div>
+        <ul class="prfl"><li>User authentication &amp; roles</li><li>Core feature development</li><li>Dashboard &amp; analytics</li><li>Payment / subscription integration</li><li>REST API architecture</li><li>Cloud deployment setup</li></ul>
         <a href="#contact" class="prcta" data-svc="SaaS MVP Development">Get Started →</a>
       </div>
-
-      <!-- SaaS Professional -->
       <div class="prc feat" data-cat="saas" data-inr="99,999" data-usd="1,199" data-eur="1,111" data-gbp="952">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div>
-          <div class="prname">SaaS Professional</div>
-          <div class="prdesc">Full-featured SaaS platform ready for scale</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div><div class="prname">SaaS Professional</div><div class="prdesc">Full-featured SaaS platform ready for scale</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>99,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 8–12 Weeks Delivery</div>
-        <ul class="prfl">
-          <li>Multi-tenant architecture</li>
-          <li>Advanced admin panel</li>
-          <li>API with documentation</li>
-          <li>Real-time analytics dashboard</li>
-          <li>Third-party integrations</li>
-          <li>CI/CD &amp; monitoring setup</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 8–12 Weeks Delivery</div>
+        <ul class="prfl"><li>Multi-tenant architecture</li><li>Advanced admin panel</li><li>API with documentation</li><li>Real-time analytics dashboard</li><li>Third-party integrations</li><li>CI/CD &amp; monitoring setup</li></ul>
         <a href="#contact" class="prcta" data-svc="SaaS Professional Platform">Get Started →</a>
       </div>
-
-      <!-- SaaS Enterprise -->
       <div class="prc" data-cat="saas" data-inr="Custom" data-usd="Custom" data-eur="Custom" data-gbp="Custom">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div>
-          <div class="prname">SaaS Enterprise</div>
-          <div class="prdesc">Custom enterprise-grade SaaS solution</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--AL);color:var(--A)">SaaS</div><div class="prname">SaaS Enterprise</div><div class="prdesc">Custom enterprise-grade SaaS solution</div></div>
         <div class="prprice"><span class="prcur" data-cursym></span><span class="pramt" data-price>Custom</span></div>
-        <div class="prper">contact for quote</div>
-        <div class="prdlv">⏱ Custom Timeline</div>
-        <ul class="prfl">
-          <li>Custom architecture design</li>
-          <li>Enterprise security &amp; compliance</li>
-          <li>Dedicated infrastructure</li>
-          <li>White-label options</li>
-          <li>Priority support &amp; SLA</li>
-          <li>Documentation &amp; training</li>
-        </ul>
+        <div class="prper">contact for quote</div><div class="prdlv">⏱ Custom Timeline</div>
+        <ul class="prfl"><li>Custom architecture design</li><li>Enterprise security &amp; compliance</li><li>Dedicated infrastructure</li><li>White-label options</li><li>Priority support &amp; SLA</li><li>Documentation &amp; training</li></ul>
         <a href="#contact" class="prcta" data-svc="SaaS Enterprise Solution">Contact Us →</a>
       </div>
-
-      <!-- Starter Web App -->
       <div class="prc" data-cat="webdev" data-inr="19,999" data-usd="241" data-eur="222" data-gbp="190">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div>
-          <div class="prname">Starter Web App</div>
-          <div class="prdesc">Custom web application with essential functionality</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div><div class="prname">Starter Web App</div><div class="prdesc">Custom web application with essential functionality</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>19,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 2–3 Weeks Delivery</div>
-        <ul class="prfl">
-          <li>Custom frontend &amp; backend</li>
-          <li>Database design &amp; setup</li>
-          <li>User authentication</li>
-          <li>API integration</li>
-          <li>Responsive design</li>
-          <li>Deployment &amp; hosting setup</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 2–3 Weeks Delivery</div>
+        <ul class="prfl"><li>Custom frontend &amp; backend</li><li>Database design &amp; setup</li><li>User authentication</li><li>API integration</li><li>Responsive design</li><li>Deployment &amp; hosting setup</li></ul>
         <a href="#contact" class="prcta" data-svc="Starter Web App Development">Get Started →</a>
       </div>
-
-      <!-- Advanced Web App -->
       <div class="prc feat" data-cat="webdev" data-inr="39,999" data-usd="479" data-eur="444" data-gbp="381">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div>
-          <div class="prname">Advanced Web App</div>
-          <div class="prdesc">Full-scale web application with advanced features</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div><div class="prname">Advanced Web App</div><div class="prdesc">Full-scale web application with advanced features</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>39,999</span></div>
-        <div class="prper">one-time</div>
-        <div class="prdlv">⏱ 4–6 Weeks Delivery</div>
-        <ul class="prfl">
-          <li>Advanced frontend (React / Next.js)</li>
-          <li>Scalable backend architecture</li>
-          <li>Real-time features</li>
-          <li>Third-party integrations</li>
-          <li>Advanced auth &amp; role management</li>
-          <li>Performance &amp; security audit</li>
-        </ul>
+        <div class="prper">one-time</div><div class="prdlv">⏱ 4–6 Weeks Delivery</div>
+        <ul class="prfl"><li>Advanced frontend (React / Next.js)</li><li>Scalable backend architecture</li><li>Real-time features</li><li>Third-party integrations</li><li>Advanced auth &amp; role management</li><li>Performance &amp; security audit</li></ul>
         <a href="#contact" class="prcta" data-svc="Advanced Web App Development">Get Started →</a>
       </div>
-
-      <!-- Enterprise Solution -->
       <div class="prc" data-cat="webdev" data-inr="Custom" data-usd="Custom" data-eur="Custom" data-gbp="Custom">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div>
-          <div class="prname">Enterprise Solution</div>
-          <div class="prdesc">Full-scale enterprise web development</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--TL);color:var(--T)">Web Dev</div><div class="prname">Enterprise Solution</div><div class="prdesc">Full-scale enterprise web development</div></div>
         <div class="prprice"><span class="prcur" data-cursym></span><span class="pramt" data-price>Custom</span></div>
-        <div class="prper">contact for quote</div>
-        <div class="prdlv">⏱ Custom Timeline</div>
-        <ul class="prfl">
-          <li>Enterprise architecture</li>
-          <li>Microservices &amp; API gateway</li>
-          <li>DevOps &amp; CI/CD pipeline</li>
-          <li>Load testing &amp; optimization</li>
-          <li>24/7 monitoring setup</li>
-          <li>Comprehensive documentation</li>
-        </ul>
+        <div class="prper">contact for quote</div><div class="prdlv">⏱ Custom Timeline</div>
+        <ul class="prfl"><li>Enterprise architecture</li><li>Microservices &amp; API gateway</li><li>DevOps &amp; CI/CD pipeline</li><li>Load testing &amp; optimization</li><li>24/7 monitoring setup</li><li>Comprehensive documentation</li></ul>
         <a href="#contact" class="prcta" data-svc="Enterprise Web Solution">Contact Us →</a>
       </div>
-
-      <!-- Monthly Maintenance -->
       <div class="prc" data-cat="maintenance" data-inr="499" data-usd="6" data-eur="6" data-gbp="5">
-        <div class="prhead">
-          <div class="prtag" style="background:var(--SL);color:var(--S)">Support</div>
-          <div class="prname">Monthly Maintenance</div>
-          <div class="prdesc">Keep your website updated, secure &amp; running smoothly</div>
-        </div>
+        <div class="prhead"><div class="prtag" style="background:var(--SL);color:var(--S)">Support</div><div class="prname">Monthly Maintenance</div><div class="prdesc">Keep your website updated, secure &amp; running smoothly</div></div>
         <div class="prprice"><span class="prcur" data-cursym>₹</span><span class="pramt" data-price>499</span></div>
-        <div class="prper">per month</div>
-        <div class="prdlv">⏱ Ongoing Support</div>
-        <ul class="prfl">
-          <li>Regular content updates</li>
-          <li>Security patches &amp; backups</li>
-          <li>Technical support</li>
-          <li>Performance monitoring</li>
-          <li>Uptime guarantee</li>
-        </ul>
+        <div class="prper">per month</div><div class="prdlv">⏱ Ongoing Support</div>
+        <ul class="prfl"><li>Regular content updates</li><li>Security patches &amp; backups</li><li>Technical support</li><li>Performance monitoring</li><li>Uptime guarantee</li></ul>
         <a href="#contact" class="prcta" data-svc="Monthly Maintenance &amp; Support">Get Started →</a>
       </div>
-
     </div>
-
-    <div class="soffer">
-      <div class="soffic">🎯</div>
-      <div>
-        <div class="sofft">Special Offer: Free Demo Homepage</div>
-        <div class="soffd">Get a free demo homepage before final confirmation. Best suited for Doctors, Chartered Accountants, Lawyers, Clinics, Consultants &amp; Small Businesses.</div>
-      </div>
-    </div>
+    <div class="soffer"><div class="soffic">🎯</div><div><div class="sofft">Special Offer: Free Demo Homepage</div><div class="soffd">Get a free demo homepage before final confirmation. Best suited for Doctors, Chartered Accountants, Lawyers, Clinics, Consultants &amp; Small Businesses.</div></div></div>
     <p class="svnote">All prices are exclusive of taxes where applicable. <strong>Custom requirements?</strong> <a href="#contact" style="color:var(--A);text-decoration:underline">Contact for a personalized quote →</a></p>
   </div>
 </section>
@@ -852,74 +676,12 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
       <p class="ssub">Trusted by professionals &amp; businesses across India for quality website development.</p>
     </div>
     <div class="rvg">
-
-      <div class="rvc">
-        <div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div>
-        <div class="rvtext">Aditya built a stunning portfolio website for my dental clinic in just 5 days. The design is modern, patients can book appointments directly, and the WhatsApp integration has been incredibly useful. I receive 3-4 new patient inquiries every week now. Highly professional work!</div>
-        <div class="rvauthor">
-          <div class="rvav" style="background:linear-gradient(135deg,#0D7C6E,#14a890)">DS</div>
-          <div>
-            <div class="rvname">Dr. Sneha Mukherjee</div>
-            <div class="rvrole">Dentist &amp; Clinic Owner</div>
-            <div class="rvloc">Kolkata, West Bengal</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rvc">
-        <div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div>
-        <div class="rvtext">We needed an e-commerce website for our handloom saree business, and Aditya delivered beyond expectations. The product catalog, payment integration, and mobile-responsive design are all top-notch. Our online orders have increased significantly since launch. Very reasonable pricing too!</div>
-        <div class="rvauthor">
-          <div class="rvav" style="background:linear-gradient(135deg,var(--A),var(--A2))">RP</div>
-          <div>
-            <div class="rvname">Rajesh Pradhan</div>
-            <div class="rvrole">Owner, Pradhan Handlooms</div>
-            <div class="rvloc">Bengaluru, Karnataka</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rvc">
-        <div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div>
-        <div class="rvtext">As a Chartered Accountant, I needed a professional website that reflects credibility. Aditya understood my requirements perfectly — clean design, easy navigation, and a proper inquiry form. My clients often compliment the website. The SEO setup also helped me rank on the first page for local searches.</div>
-        <div class="rvauthor">
-          <div class="rvav" style="background:linear-gradient(135deg,var(--S),var(--S2))">AM</div>
-          <div>
-            <div class="rvname">Ankit Mehta</div>
-            <div class="rvrole">Chartered Accountant</div>
-            <div class="rvloc">Mumbai, Maharashtra</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rvc">
-        <div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar empty">&#9733;</span></div>
-        <div class="rvtext">Got my personal portfolio website done by Aditya while I was in my final year of engineering. He was very responsive on WhatsApp, made all the revisions I asked for, and delivered on time. The website helped me stand out during campus placements. Great value for the price!</div>
-        <div class="rvauthor">
-          <div class="rvav" style="background:linear-gradient(135deg,#6366f1,#818cf8)">PK</div>
-          <div>
-            <div class="rvname">Priya Krishnan</div>
-            <div class="rvrole">Software Engineer, TCS</div>
-            <div class="rvloc">Chennai, Tamil Nadu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rvc">
-        <div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div>
-        <div class="rvtext">Aditya developed a complete business website for our restaurant chain with online menu, Google Maps integration, and table booking functionality. The turnaround was quick, communication was excellent, and the final product looks premium. Already recommended him to two other business owners.</div>
-        <div class="rvauthor">
-          <div class="rvav" style="background:linear-gradient(135deg,#dc2626,#ef4444)">VS</div>
-          <div>
-            <div class="rvname">Vikram Singh Chauhan</div>
-            <div class="rvrole">Director, Chauhan's Kitchen</div>
-            <div class="rvloc">New Delhi, Delhi</div>
-          </div>
-        </div>
-      </div>
-
+      <div class="rvc"><div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div><div class="rvtext">Aditya built a stunning portfolio website for my dental clinic in just 5 days. The design is modern, patients can book appointments directly, and the WhatsApp integration has been incredibly useful. I receive 3-4 new patient inquiries every week now. Highly professional work!</div><div class="rvauthor"><div class="rvav" style="background:linear-gradient(135deg,#0D7C6E,#14a890)">DS</div><div><div class="rvname">Dr. Sneha Mukherjee</div><div class="rvrole">Dentist &amp; Clinic Owner</div><div class="rvloc">Kolkata, West Bengal</div></div></div></div>
+      <div class="rvc"><div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div><div class="rvtext">We needed an e-commerce website for our handloom saree business, and Aditya delivered beyond expectations. The product catalog, payment integration, and mobile-responsive design are all top-notch. Our online orders have increased significantly since launch. Very reasonable pricing too!</div><div class="rvauthor"><div class="rvav" style="background:linear-gradient(135deg,var(--A),var(--A2))">RP</div><div><div class="rvname">Rajesh Pradhan</div><div class="rvrole">Owner, Pradhan Handlooms</div><div class="rvloc">Bengaluru, Karnataka</div></div></div></div>
+      <div class="rvc"><div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div><div class="rvtext">As a Chartered Accountant, I needed a professional website that reflects credibility. Aditya understood my requirements perfectly — clean design, easy navigation, and a proper inquiry form. My clients often compliment the website. The SEO setup also helped me rank on the first page for local searches.</div><div class="rvauthor"><div class="rvav" style="background:linear-gradient(135deg,var(--S),var(--S2))">AM</div><div><div class="rvname">Ankit Mehta</div><div class="rvrole">Chartered Accountant</div><div class="rvloc">Mumbai, Maharashtra</div></div></div></div>
+      <div class="rvc"><div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar empty">&#9733;</span></div><div class="rvtext">Got my personal portfolio website done by Aditya while I was in my final year of engineering. He was very responsive on WhatsApp, made all the revisions I asked for, and delivered on time. The website helped me stand out during campus placements. Great value for the price!</div><div class="rvauthor"><div class="rvav" style="background:linear-gradient(135deg,#6366f1,#818cf8)">PK</div><div><div class="rvname">Priya Krishnan</div><div class="rvrole">Software Engineer, TCS</div><div class="rvloc">Chennai, Tamil Nadu</div></div></div></div>
+      <div class="rvc"><div class="rvstars"><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span><span class="rvstar">&#9733;</span></div><div class="rvtext">Aditya developed a complete business website for our restaurant chain with online menu, Google Maps integration, and table booking functionality. The turnaround was quick, communication was excellent, and the final product looks premium. Already recommended him to two other business owners.</div><div class="rvauthor"><div class="rvav" style="background:linear-gradient(135deg,#dc2626,#ef4444)">VS</div><div><div class="rvname">Vikram Singh Chauhan</div><div class="rvrole">Director, Chauhan's Kitchen</div><div class="rvloc">New Delhi, Delhi</div></div></div></div>
     </div>
-
     <div class="rvsummary">
       <div class="rvstat"><div class="rvstatn">4.9</div><div class="rvstatl">Avg. Rating</div></div>
       <div class="rvstat"><div class="rvstatn">50+</div><div class="rvstatl">Projects Delivered</div></div>
@@ -971,14 +733,12 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
         <p class="cth">Ready to bring your <em>data to life?</em></p>
         <p class="ctsub">Whether you need a financial deep-dive, a predictive ML model, a BI dashboard, or a market research report — I deliver precision, speed and clarity.</p>
         <div class="ctlinks">
-       
           <a href="tel:+919331488999" class="ctrow"><div class="ctric">📞</div><div><span class="ctlbl">Phone</span>+91 93314 88999</div></a>
           <a href="mailto:adityaroy83061@gmail.com?subject=Website%20Development%20Inquiry" class="ctrow"><div class="ctric">✉️</div><div><span class="ctlbl">Email</span>adityaroy83061@gmail.com</div></a>
           <a href="https://linkedin.com/in/adityaroy2002" target="_blank" class="ctrow"><div class="ctric">💼</div><div><span class="ctlbl">LinkedIn</span>linkedin.com/in/adityaroy2002</div></a>
           <a href="https://github.com/parth-roy" target="_blank" class="ctrow"><div class="ctric">🔗</div><div><span class="ctlbl">GitHub</span>github.com/parth-roy</div></a>
           <a href="https://wa.me/919331488999?text=Hello%20Aditya,%20I%20found%20your%20professional%20website%20services%20through%20LinkedIn%20and%20would%20like%20to%20connect%20regarding%20website%20development.%20Kindly%20share%20more%20details." target="_blank" class="ctrow"><div class="ctric" style="border-color:rgba(37,211,102,.3);background:rgba(37,211,102,.1)">💬</div><div><span class="ctlbl">WhatsApp</span>Chat on WhatsApp</div></a>
           <a href="#" class="ctrow"><div class="ctric">📍</div><div><span class="ctlbl">Location</span>Barrackpore, Kolkata — Remote Ready</div></a>
-          
         </div>
         <div class="ctqrs">
           <div class="qrw2"><canvas id="qr2" width="84" height="84"></canvas></div>
@@ -1037,7 +797,6 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
       </form>
     </div>
   </div>
-
 </section>
 
 <!-- FOOTER -->
@@ -1062,201 +821,258 @@ footer{background:#0A0907;padding:20px 60px;border-top:1px solid rgba(255,255,25
 </div>
 
 <script>
-/* ── SKILL BARS — triggered by scroll, no opacity hacks ── */
-function animateBars(){
-  document.querySelectorAll('.skf').forEach(function(bar){
-    var w = bar.getAttribute('data-w');
-    if(w) bar.style.width = w + '%';
-  });
-}
-var triggered = false;
-window.addEventListener('scroll', function(){
-  if(!triggered){
-    var st = document.getElementById('skillsTarget');
-    if(st){
-      var rect = st.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 80){
-        triggered = true;
-        animateBars();
-      }
-    }
-  }
-});
-// Also animate on load if already visible
-window.addEventListener('load', function(){
-  setTimeout(function(){
-    var st = document.getElementById('skillsTarget');
-    if(st){
-      var rect = st.getBoundingClientRect();
-      if(rect.top < window.innerHeight){ animateBars(); triggered = true; }
-    }
-  }, 300);
-});
+/* ── SKILL BARS ── */
+function animateBars(){document.querySelectorAll('.skf').forEach(function(bar){var w=bar.getAttribute('data-w');if(w)bar.style.width=w+'%';});}
+var triggered=false;
+window.addEventListener('scroll',function(){if(!triggered){var st=document.getElementById('skillsTarget');if(st){var rect=st.getBoundingClientRect();if(rect.top<window.innerHeight-80){triggered=true;animateBars();}}}});
+window.addEventListener('load',function(){setTimeout(function(){var st=document.getElementById('skillsTarget');if(st){var rect=st.getBoundingClientRect();if(rect.top<window.innerHeight){animateBars();triggered=true;}}},300);});
 
-/* ── NAV SCROLL SHRINK ── */
-window.addEventListener('scroll', function(){
-  var nav = document.querySelector('nav');
-  if(nav) nav.style.padding = window.scrollY > 50 ? '11px 60px' : '16px 60px';
-});
+/* ── NAV SCROLL ── */
+window.addEventListener('scroll',function(){var nav=document.querySelector('nav');if(nav)nav.style.padding=window.scrollY>50?'11px 60px':'16px 60px';});
 
-/* ── QR CODE — pure canvas, zero external deps ── */
-function drawQR(canvasId, px){
-  var canvas = document.getElementById(canvasId);
-  if(!canvas) return;
-  var ctx = canvas.getContext('2d');
-  canvas.width = px; canvas.height = px;
-  var url = 'https://www.linkedin.com/in/adityaroy2002';
-  var cells = 25;
-  var cs = Math.floor(px / cells);
-  var off = Math.floor((px - cells * cs) / 2);
+/* ── QR CODE ── */
+function drawQR(canvasId,px){var canvas=document.getElementById(canvasId);if(!canvas)return;var ctx=canvas.getContext('2d');canvas.width=px;canvas.height=px;var url='https://www.linkedin.com/in/adityaroy2002';var cells=25;var cs=Math.floor(px/cells);var off=Math.floor((px-cells*cs)/2);ctx.fillStyle='#fff';ctx.fillRect(0,0,px,px);ctx.fillStyle='#1E2D3D';function finder(fx,fy){for(var r=0;r<7;r++){for(var c=0;c<7;c++){var dark=(r===0||r===6||c===0||c===6||(r>=2&&r<=4&&c>=2&&c<=4));if(dark)ctx.fillRect(off+(fx+c)*cs,off+(fy+r)*cs,cs,cs);}}ctx.fillStyle='#fff';if(fx===0&&fy===0){ctx.fillRect(off+7*cs,off,cs,8*cs);ctx.fillRect(off,off+7*cs,8*cs,cs);}if(fx===cells-7&&fy===0){ctx.fillRect(off+(cells-8)*cs,off,cs,8*cs);ctx.fillRect(off+(cells-8)*cs,off+7*cs,7*cs,cs);}if(fx===0&&fy===cells-7){ctx.fillRect(off+7*cs,off+(cells-8)*cs,cs,7*cs);ctx.fillRect(off,off+(cells-8)*cs,8*cs,cs);}ctx.fillStyle='#1E2D3D';}finder(0,0);finder(cells-7,0);finder(0,cells-7);for(var i=8;i<cells-8;i++){if(i%2===0){ctx.fillRect(off+6*cs,off+i*cs,cs,cs);ctx.fillRect(off+i*cs,off+6*cs,cs,cs);}}var bytes=[];for(var i=0;i<url.length;i++)bytes.push(url.charCodeAt(i));function isReserved(r,c){if(r<9&&c<9)return true;if(r<9&&c>=cells-8)return true;if(r>=cells-8&&c<9)return true;if(r===6||c===6)return true;return false;}var bi=0,bp=7;for(var col=cells-1;col>=1;col-=2){if(col===6)col=5;for(var ri=0;ri<cells;ri++){var row=(Math.floor((cells-1-col)/2)%2===0)?(cells-1-ri):ri;for(var ci2=col;ci2>=col-1&&ci2>=0;ci2--){if(!isReserved(row,ci2)){var byte=bytes[bi%bytes.length]||0;var dark=((byte>>bp)&1)^((row*ci2)%2===0?0:1);if(dark)ctx.fillRect(off+ci2*cs,off+row*cs,cs,cs);bp--;if(bp<0){bp=7;bi++;}}}}}ctx.strokeStyle='rgba(200,114,10,0.35)';ctx.lineWidth=1.5;ctx.strokeRect(1,1,px-2,px-2);}
+drawQR('qr1',68);drawQR('qr2',84);
 
-  ctx.fillStyle = '#fff';
-  ctx.fillRect(0, 0, px, px);
-  ctx.fillStyle = '#1E2D3D';
+/* ── CONTACT FORM ── */
+document.getElementById('CF').addEventListener('submit',async function(e){e.preventDefault();var SB=document.getElementById('SB'),FM=document.getElementById('FM');var name=document.getElementById('fn').value;var email=document.getElementById('fe').value;var phone=document.getElementById('fp').value;var type=document.getElementById('ft').value;var msg=document.getElementById('fm').value;SB.textContent='Sending...';SB.disabled=true;FM.className='fmsg';FM.style.display='none';try{var res=await fetch('https://formspree.io/f/xwvnjbdn',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,phone:phone,type:type,message:msg,_subject:'Portfolio Contact: '+type+' — '+name})});if(res.ok){FM.textContent='✓ Message sent! Aditya will reply within 24 hours.';FM.className='fmsg ok';this.reset();}else{throw new Error('fail');}}catch(err){var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nService: '+type+'\n\nMessage:\n'+msg;window.location.href='mailto:adityaroy83061@gmail.com?subject='+encodeURIComponent('Portfolio Contact: '+type)+'&body='+encodeURIComponent(body);FM.textContent='Opening your email client...';FM.className='fmsg ok';}finally{SB.textContent='Send Message →';SB.disabled=false;}});
 
-  // Finder pattern helper
-  function finder(fx, fy){
-    for(var r=0;r<7;r++){
-      for(var c=0;c<7;c++){
-        var dark=(r===0||r===6||c===0||c===6||(r>=2&&r<=4&&c>=2&&c<=4));
-        if(dark) ctx.fillRect(off+(fx+c)*cs, off+(fy+r)*cs, cs, cs);
-      }
-    }
-    // white separator
-    ctx.fillStyle='#fff';
-    if(fx===0&&fy===0){ ctx.fillRect(off+7*cs,off,cs,8*cs); ctx.fillRect(off,off+7*cs,8*cs,cs); }
-    if(fx===cells-7&&fy===0){ ctx.fillRect(off+(cells-8)*cs,off,cs,8*cs); ctx.fillRect(off+(cells-8)*cs,off+7*cs,7*cs,cs); }
-    if(fx===0&&fy===cells-7){ ctx.fillRect(off+7*cs,off+(cells-8)*cs,cs,7*cs); ctx.fillRect(off,off+(cells-8)*cs,8*cs,cs); }
-    ctx.fillStyle='#1E2D3D';
-  }
-  finder(0,0); finder(cells-7,0); finder(0,cells-7);
+/* ── SERVICES FILTER & CURRENCY ── */
+(function(){var tabs=document.querySelectorAll('.svtab');var cards=document.querySelectorAll('.prc');var curSel=document.getElementById('curSel');var symbols={inr:'₹',usd:'$',eur:'€',gbp:'£'};tabs.forEach(function(tab){tab.addEventListener('click',function(){tabs.forEach(function(t){t.classList.remove('act');});tab.classList.add('act');var filter=tab.getAttribute('data-filter');cards.forEach(function(card){var cat=card.getAttribute('data-cat');card.style.display=(filter==='all'||cat===filter)?'':'none';});});});curSel.addEventListener('change',function(){var cur=this.value;var sym=symbols[cur];cards.forEach(function(card){var price=card.getAttribute('data-'+cur);var priceEl=card.querySelector('[data-price]');var symEl=card.querySelector('[data-cursym]');if(priceEl)priceEl.textContent=price;if(symEl)symEl.textContent=(price==='Custom')?'':sym;});});document.querySelectorAll('.prcta').forEach(function(btn){btn.addEventListener('click',function(){var svc=this.getAttribute('data-svc');if(svc){var sel=document.getElementById('ft');if(sel){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===svc){sel.selectedIndex=i;break;}}}}});});})();
 
-  // Timing strips
-  for(var i=8;i<cells-8;i++){
-    if(i%2===0){
-      ctx.fillRect(off+6*cs, off+i*cs, cs, cs);
-      ctx.fillRect(off+i*cs, off+6*cs, cs, cs);
-    }
-  }
-
-  // Data area — deterministic from URL bytes
-  var bytes = [];
-  for(var i=0;i<url.length;i++) bytes.push(url.charCodeAt(i));
-  function isReserved(r,c){
-    if(r<9&&c<9) return true;
-    if(r<9&&c>=cells-8) return true;
-    if(r>=cells-8&&c<9) return true;
-    if(r===6||c===6) return true;
-    return false;
-  }
-  var bi=0, bp=7;
-  for(var col=cells-1;col>=1;col-=2){
-    if(col===6)col=5;
-    for(var ri=0;ri<cells;ri++){
-      var row=(Math.floor((cells-1-col)/2)%2===0)?(cells-1-ri):ri;
-      for(var ci2=col;ci2>=col-1&&ci2>=0;ci2--){
-        if(!isReserved(row,ci2)){
-          var byte=bytes[bi%bytes.length]||0;
-          var dark=((byte>>bp)&1)^((row*ci2)%2===0?0:1);
-          if(dark) ctx.fillRect(off+ci2*cs, off+row*cs, cs, cs);
-          bp--; if(bp<0){bp=7;bi++;}
-        }
-      }
-    }
-  }
-
-  // amber border
-  ctx.strokeStyle='rgba(200,114,10,0.35)';
-  ctx.lineWidth=1.5;
-  ctx.strokeRect(1,1,px-2,px-2);
-}
-
-// Draw QR codes immediately
-drawQR('qr1', 68);
-drawQR('qr2', 84);
-
-/* ── CONTACT FORM — Formspree ── */
-document.getElementById('CF').addEventListener('submit', async function(e){
-  e.preventDefault();
-  var SB=document.getElementById('SB'), FM=document.getElementById('FM');
-  var name=document.getElementById('fn').value;
-  var email=document.getElementById('fe').value;
-  var phone=document.getElementById('fp').value;
-  var type=document.getElementById('ft').value;
-  var msg=document.getElementById('fm').value;
-
-  SB.textContent='Sending...'; SB.disabled=true;
-  FM.className='fmsg'; FM.style.display='none';
-
-  try{
-    var res = await fetch('https://formspree.io/f/xwvnjbdn',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({name:name,email:email,phone:phone,type:type,message:msg,
-        _subject:'Portfolio Contact: '+type+' — '+name})
-    });
-    if(res.ok){
-      FM.textContent='✓ Message sent! Aditya will reply within 24 hours.';
-      FM.className='fmsg ok';
-      this.reset();
-    } else { throw new Error('fail'); }
-  } catch(err){
-    var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nService: '+type+'\n\nMessage:\n'+msg;
-    window.location.href='mailto:adityaroy83061@gmail.com?subject='+encodeURIComponent('Portfolio Contact: '+type)+'&body='+encodeURIComponent(body);
-    FM.textContent='Opening your email client...';
-    FM.className='fmsg ok';
-  } finally{
-    SB.textContent='Send Message →'; SB.disabled=false;
-  }
-});
-
-/* ── SERVICES: Category Filter & Currency Switcher ── */
+/* ══════════════════════════════════════════════════════
+   ANIMATED GLOBE — Space Blue · ADITYA Orbit · Hover Explode
+══════════════════════════════════════════════════════ */
 (function(){
-  var tabs=document.querySelectorAll('.svtab');
-  var cards=document.querySelectorAll('.prc');
-  var curSel=document.getElementById('curSel');
-  var symbols={inr:'₹',usd:'$',eur:'€',gbp:'£'};
+  var canvas=document.getElementById('globe-canvas');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  var W,H,CX,CY,R;
+  var mouseX=-9999,mouseY=-9999,isOver=false;
+  var rotAngle=0,orbitAngle=0,time=0;
+  var explodeParticles=[],exploding=false,wasOver=false;
 
-  // Category filter
-  tabs.forEach(function(tab){
-    tab.addEventListener('click',function(){
-      tabs.forEach(function(t){t.classList.remove('act');});
-      tab.classList.add('act');
-      var filter=tab.getAttribute('data-filter');
-      cards.forEach(function(card){
-        var cat=card.getAttribute('data-cat');
-        card.style.display=(filter==='all'||cat===filter)?'':'none';
+  function resize(){
+    W=canvas.width=canvas.offsetWidth;
+    H=canvas.height=canvas.offsetHeight;
+    CX=W/2; CY=H/2;
+    R=Math.min(W,H)*0.32;
+  }
+  resize();
+  window.addEventListener('resize',resize);
+
+  /* Mouse tracking on hero section only */
+  canvas.addEventListener('mousemove',function(e){
+    var rect=canvas.getBoundingClientRect();
+    mouseX=e.clientX-rect.left;
+    mouseY=e.clientY-rect.top;
+    var dx=mouseX-CX,dy=mouseY-CY;
+    isOver=Math.sqrt(dx*dx+dy*dy)<R*1.05;
+  });
+  canvas.addEventListener('mouseleave',function(){isOver=false;mouseX=-9999;mouseY=-9999;});
+
+  /* Globe points */
+  var DOTS=360,pts=[];
+  for(var i=0;i<DOTS;i++){
+    var u=Math.random(),v=Math.random();
+    pts.push({theta:2*Math.PI*u,phi:Math.acos(2*v-1),big:Math.random()>0.93,teal:Math.random()>0.65});
+  }
+  var LNGS=22,LATS=6;
+  var lngs=[],lats=[];
+  for(var i=0;i<LNGS;i++)lngs.push(i/LNGS*Math.PI*2);
+  for(var i=1;i<=LATS;i++)lats.push(i/(LATS+1)*Math.PI);
+
+  function proj(theta,phi,r){
+    var x=r*Math.sin(phi)*Math.cos(theta+rotAngle);
+    var y=r*Math.cos(phi);
+    var z=r*Math.sin(phi)*Math.sin(theta+rotAngle);
+    return{x:CX+x,y:CY+y,z:z};
+  }
+
+  /* Explosion trigger */
+  function triggerExplode(){
+    explodeParticles=[];
+    var cols=['#1E5AB4','#2D7DD2','#4FC3F7','#00BCD4','#26C6DA','#80DEEA','#B3E5FC','#7EC8E3','#ffffff'];
+    for(var i=0;i<200;i++){
+      var a=Math.random()*Math.PI*2;
+      var spd=1.5+Math.random()*9;
+      explodeParticles.push({
+        x:CX+(Math.random()-.5)*R*1.2,
+        y:CY+(Math.random()-.5)*R*1.2,
+        vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,
+        size:1+Math.random()*4.5,
+        color:cols[Math.floor(Math.random()*cols.length)],
+        alpha:1,decay:0.014+Math.random()*0.018
       });
-    });
-  });
+    }
+    exploding=true;
+  }
 
-  // Currency switcher
-  curSel.addEventListener('change',function(){
-    var cur=this.value;
-    var sym=symbols[cur];
-    cards.forEach(function(card){
-      var price=card.getAttribute('data-'+cur);
-      var priceEl=card.querySelector('[data-price]');
-      var symEl=card.querySelector('[data-cursym]');
-      if(priceEl) priceEl.textContent=price;
-      if(symEl) symEl.textContent=(price==='Custom')?'':sym;
-    });
-  });
+  /* Draw one frame */
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    time++;
 
-  // CTA auto-select service in contact form
-  document.querySelectorAll('.prcta').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var svc=this.getAttribute('data-svc');
-      if(svc){
-        var sel=document.getElementById('ft');
-        if(sel){
-          for(var i=0;i<sel.options.length;i++){
-            if(sel.options[i].text===svc){sel.selectedIndex=i;break;}
+    /* Explode state */
+    if(isOver&&!wasOver)triggerExplode();
+    if(!isOver&&wasOver){exploding=false;explodeParticles=[];}
+    wasOver=isOver;
+
+    var globeAlpha=1;
+    if(exploding){
+      var alive=explodeParticles.filter(function(p){return p.alpha>0;}).length;
+      globeAlpha=Math.max(0,alive/200-0.2);
+    }
+
+    /* Ambient glow */
+    if(globeAlpha>0.01){
+      var g=ctx.createRadialGradient(CX,CY,R*.1,CX,CY,R*1.5);
+      g.addColorStop(0,'rgba(79,195,247,0.05)');
+      g.addColorStop(.6,'rgba(30,90,180,0.07)');
+      g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.globalAlpha=globeAlpha;
+      ctx.fillStyle=g;
+      ctx.beginPath();ctx.arc(CX,CY,R*1.5,0,Math.PI*2);ctx.fill();
+
+      /* Latitude rings */
+      lats.forEach(function(phi,li){
+        var rR=R*Math.sin(phi),rY=CY+R*Math.cos(phi);
+        ctx.beginPath();
+        ctx.ellipse(CX,rY,rR,rR*0.14,0,0,Math.PI*2);
+        ctx.strokeStyle='rgba(79,195,247,'+(0.07+li*0.012)+')';
+        ctx.lineWidth=0.7;ctx.stroke();
+      });
+
+      /* Longitude arcs */
+      lngs.forEach(function(lng){
+        ctx.beginPath();var first=true;
+        for(var i=0;i<=60;i++){
+          var phi=i/60*Math.PI;
+          var p=proj(lng,phi,R);
+          if(p.z<0){first=true;continue;}
+          if(first){ctx.moveTo(p.x,p.y);first=false;}else ctx.lineTo(p.x,p.y);
+        }
+        var a=0.04+(Math.sin(lng+rotAngle)+1)*0.03;
+        ctx.strokeStyle='rgba(45,125,210,'+a+')';
+        ctx.lineWidth=0.55;ctx.stroke();
+      });
+
+      /* Dots */
+      var bigPts=[];
+      pts.forEach(function(pt){
+        var p=proj(pt.theta,pt.phi,R);
+        if(p.z<0)return;
+        var b=(p.z/R+1)/2;
+        if(pt.big){bigPts.push({p:p,b:b});return;}
+        ctx.globalAlpha=(0.12+b*0.5)*globeAlpha;
+        ctx.beginPath();ctx.arc(p.x,p.y,1.3,0,Math.PI*2);
+        ctx.fillStyle=pt.teal?'rgba(0,188,212,'+(0.4+b*.5)+')':'rgba(79,195,247,'+(0.35+b*.5)+')';
+        ctx.fill();
+      });
+
+      /* Big glow dots */
+      bigPts.forEach(function(item){
+        var p=item.p,b=item.b;
+        ctx.save();
+        ctx.globalAlpha=(0.5+b*.5)*globeAlpha;
+        ctx.shadowColor='#4FC3F7';ctx.shadowBlur=14;
+        ctx.beginPath();ctx.arc(p.x,p.y,3.5,0,Math.PI*2);
+        ctx.fillStyle='#B3E5FC';ctx.fill();
+        var pulse=(Math.sin(time*.05+p.x)+1)/2;
+        ctx.globalAlpha=(0.1+pulse*.18)*globeAlpha;
+        ctx.beginPath();ctx.arc(p.x,p.y,7+pulse*4,0,Math.PI*2);
+        ctx.strokeStyle='#4FC3F7';ctx.lineWidth=1;ctx.stroke();
+        ctx.restore();
+      });
+
+      /* Connect big dots */
+      for(var i=0;i<bigPts.length;i++){
+        for(var j=i+1;j<bigPts.length;j++){
+          var a=bigPts[i].p,b=bigPts[j].p;
+          var d=Math.hypot(a.x-b.x,a.y-b.y);
+          if(d<R*.36){
+            ctx.globalAlpha=0.10*(1-d/(R*.36))*globeAlpha;
+            ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+            ctx.strokeStyle='#4FC3F7';ctx.lineWidth=0.7;ctx.stroke();
           }
         }
       }
+
+      /* Globe outline */
+      ctx.globalAlpha=0.13*globeAlpha;
+      ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);
+      ctx.strokeStyle='#2D7DD2';ctx.lineWidth=1;ctx.stroke();
+
+      /* Specular */
+      var sp=ctx.createRadialGradient(CX-R*.3,CY-R*.3,0,CX-R*.1,CY-R*.1,R*.55);
+      sp.addColorStop(0,'rgba(255,255,255,0.08)');sp.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.globalAlpha=globeAlpha;ctx.fillStyle=sp;
+      ctx.beginPath();ctx.arc(CX,CY,R,0,Math.PI*2);ctx.fill();
+    }
+
+    /* Orbit ring */
+    var orbitR=R*1.3,tilt=0.26;
+    ctx.save();ctx.translate(CX,CY);
+    ctx.beginPath();
+    for(var i=0;i<=120;i++){
+      var a=i/120*Math.PI*2;
+      var ox=orbitR*Math.cos(a),oy=orbitR*Math.sin(a)*Math.cos(tilt);
+      i===0?ctx.moveTo(ox,oy):ctx.lineTo(ox,oy);
+    }
+    ctx.strokeStyle='rgba(79,195,247,0.10)';ctx.lineWidth=0.7;
+    ctx.setLineDash([4,9]);ctx.globalAlpha=1;ctx.stroke();ctx.setLineDash([]);
+    ctx.restore();
+
+    /* ADITYA orbiting letters */
+    var CHARS='A D I T Y A'.split('');
+    ctx.save();ctx.translate(CX,CY);
+    CHARS.forEach(function(ch,i){
+      var a=orbitAngle+(i/CHARS.length)*Math.PI*2;
+      var ox=orbitR*Math.cos(a);
+      var oy=orbitR*Math.sin(a)*Math.cos(tilt);
+      var oz=orbitR*Math.sin(a)*Math.sin(tilt);
+      var depth=(oz/orbitR+1)/2;
+      var sc=0.6+depth*0.6;
+      var fs=Math.round(12*sc);
+      ctx.save();
+      ctx.translate(ox,oy);
+      ctx.rotate(a+Math.PI/2);
+      ctx.font='700 '+fs+'px "Segoe UI",sans-serif';
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      if(oz>0){ctx.shadowColor='#4FC3F7';ctx.shadowBlur=10*sc;}
+      ctx.globalAlpha=(0.2+depth*.8);
+      ctx.fillStyle=oz>0?'#B3E5FC':'#2D6FAD';
+      ctx.fillText(ch,0,0);
+      ctx.restore();
     });
-  });
+    ctx.restore();
+
+    /* Explosion particles */
+    if(exploding){
+      var sw=(time%60)/60;
+      ctx.globalAlpha=0.3*(1-sw);
+      ctx.beginPath();ctx.arc(CX,CY,R*0.5+sw*R*1.8,0,Math.PI*2);
+      ctx.strokeStyle='#4FC3F7';ctx.lineWidth=1.5*(1-sw);ctx.stroke();
+
+      explodeParticles.forEach(function(p){
+        if(p.alpha<=0)return;
+        ctx.save();
+        ctx.globalAlpha=p.alpha;
+        ctx.shadowColor=p.color;ctx.shadowBlur=10;
+        ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fillStyle=p.color;ctx.fill();
+        ctx.restore();
+        p.x+=p.vx;p.y+=p.vy;p.vx*=0.95;p.vy*=0.95;p.alpha-=p.decay;
+      });
+    }
+
+    ctx.globalAlpha=1;
+    rotAngle+=0.004;
+    orbitAngle-=0.009;
+    requestAnimationFrame(draw);
+  }
+
+  draw();
 })();
 </script>
 </body>
