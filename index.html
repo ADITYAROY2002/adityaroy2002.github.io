@@ -14,7 +14,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-JBQ1X2BECJ');
 </script>
 <meta charset="UTF-8"/>
@@ -23,7 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Aditya Kumar Roy — Data Analyst & AI Professional</title>
 <style>
 :root{
-  /* ═══ SKY BLUE LIGHT THEME ═══ */
   --ivory:#F0F7FF;
   --paper:#E4F0FC;
   --rule:#C2D9F0;
@@ -235,30 +233,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 60px;display:fl
 .ciss{font-size:11px;color:var(--muted);}
 .cyr2{font-family:monospace;font-size:10px;color:var(--A);letter-spacing:1px;}
 
-/* REVIEWS */
-#reviews{background:var(--ivory);}
-.rvg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;}
-.rvc{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:24px;transition:transform .25s,border-color .25s,box-shadow .25s;box-shadow:0 2px 12px rgba(26,120,194,.05);}
-.rvc:hover{transform:translateY(-3px);border-color:var(--A);box-shadow:0 12px 40px rgba(26,120,194,.1);}
-.rvstars{display:flex;gap:2px;margin-bottom:12px;}
-.rvstar{color:var(--A);font-size:16px;line-height:1;}
-.rvstar.empty{color:var(--rule);}
-.rvtext{font-size:13.5px;color:var(--body);line-height:1.8;margin-bottom:16px;font-style:italic;}
-.rvtext::before{content:'\201C';font-size:28px;color:var(--A);font-weight:900;line-height:0;vertical-align:-8px;margin-right:3px;}
-.rvauthor{display:flex;align-items:center;gap:12px;}
-.rvav{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0;}
-.rvname{font-size:14px;font-weight:700;color:var(--ink);}
-.rvrole{font-size:11px;color:var(--muted);font-family:monospace;}
-.rvloc{font-size:10px;color:var(--muted);font-family:monospace;margin-top:1px;}
-.rvsummary{display:flex;justify-content:center;gap:40px;margin-top:36px;padding:20px;background:var(--paper);border:1px solid var(--rule);border-radius:12px;flex-wrap:wrap;}
-.rvstat{text-align:center;}
-.rvstatn{font-size:28px;font-weight:900;color:var(--A);letter-spacing:-1px;}
-.rvstatl{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-family:monospace;margin-top:2px;}
-
 /* CONTACT */
 #contact{background:var(--S);}
 #contact .sw{padding-top:80px;padding-bottom:80px;}
-.ctg{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.ctg{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start;}
 .cth{font-size:clamp(24px,3.5vw,38px);font-weight:900;color:#fff;letter-spacing:-.8px;line-height:1.15;margin-bottom:8px;}
 .cth em{color:#90C8F0;font-style:italic;font-weight:400;}
 .ctsub{font-size:13px;color:rgba(255,255,255,.38);line-height:1.8;margin-bottom:26px;}
@@ -274,21 +252,98 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 60px;display:fl
 .qril{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:monospace;margin-bottom:3px;}
 .qrit{font-size:11px;color:rgba(255,255,255,.5);font-family:monospace;line-height:1.5;}
 .qrict{margin-top:5px;font-size:12px;color:#90C8F0;font-weight:700;}
-.cform{display:flex;flex-direction:column;gap:13px;}
-.cfrow{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
-.cfg{display:flex;flex-direction:column;gap:6px;}
-.cfg label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:monospace;}
-.cfg input,.cfg textarea,.cfg select{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#fff;padding:11px 14px;border-radius:7px;font-family:inherit;font-size:13px;outline:none;transition:border-color .2s;}
-.cfg input::placeholder,.cfg textarea::placeholder{color:rgba(255,255,255,.2);}
-.cfg input:focus,.cfg textarea:focus,.cfg select:focus{border-color:#90C8F0;}
-.cfg select option{background:#0D2137;}
-.cfg textarea{resize:vertical;min-height:105px;}
-.btsend{padding:13px 28px;background:var(--A);color:#fff;border:none;border-radius:99px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background .2s;font-family:inherit;}
-.btsend:hover{background:#1565A8;}
-.btsend:disabled{opacity:.6;cursor:not-allowed;}
-.fmsg{display:none;padding:10px 14px;border-radius:7px;font-size:13px;font-weight:600;margin-top:2px;text-align:center;}
-.fmsg.ok{background:rgba(22,163,74,.15);border:1px solid rgba(22,163,74,.3);color:#16a34a;display:block;}
-.fmsg.er{background:rgba(200,57,43,.15);border:1px solid rgba(200,57,43,.3);color:#e55;display:block;}
+
+/* ═══ GOOGLE FORM SECTION ═══ */
+.gform-wrap{
+  position:relative;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(144,200,240,0.15);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.gform-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+  background:rgba(26,120,194,0.15);
+  border-bottom:1px solid rgba(144,200,240,0.12);
+  backdrop-filter:blur(8px);
+}
+.gform-header-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.gform-dots{display:flex;gap:5px;}
+.gform-dot{width:10px;height:10px;border-radius:50%;}
+.gform-dot-r{background:rgba(239,68,68,0.6);}
+.gform-dot-y{background:rgba(245,158,11,0.6);}
+.gform-dot-g{background:rgba(16,185,129,0.6);}
+.gform-title{
+  font-family:monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(144,200,240,0.6);
+}
+.gform-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:3px 10px;
+  background:rgba(16,185,129,0.1);
+  border:1px solid rgba(16,185,129,0.25);
+  border-radius:99px;
+  font-size:9px;
+  font-family:monospace;
+  letter-spacing:1px;
+  color:rgba(16,185,129,0.8);
+}
+.gform-badge-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:#16a34a;
+  animation:pdot 2s infinite;
+}
+.gform-iframe-wrap{
+  position:relative;
+  width:100%;
+  background:#fff;
+}
+.gform-iframe-wrap iframe{
+  display:block;
+  width:100%;
+  height:860px;
+  border:none;
+  transition:opacity 0.3s;
+}
+.gform-footer{
+  padding:12px 20px;
+  background:rgba(13,33,55,0.6);
+  border-top:1px solid rgba(144,200,240,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.gform-footer-note{
+  font-size:10px;
+  font-family:monospace;
+  color:rgba(144,200,240,0.35);
+  letter-spacing:0.5px;
+}
+.gform-footer-link{
+  font-size:10px;
+  font-family:monospace;
+  color:rgba(144,200,240,0.5);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:color 0.2s;
+  text-decoration:none;
+}
+.gform-footer-link:hover{color:#90C8F0;}
 
 /* FOOTER */
 footer{background:#060F18;padding:20px 60px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
@@ -314,24 +369,19 @@ footer{background:#060F18;padding:20px 60px;border-top:1px solid rgba(255,255,25
   .sw{padding:56px 18px;}.ag{grid-template-columns:1fr;}.pcard{position:static;}
   .shead{flex-direction:column;gap:8px;}.ssub{text-align:left;max-width:100%;}
   .exi{grid-template-columns:1fr;}.achg{grid-template-columns:1fr;}.ctg{grid-template-columns:1fr;}
-  .cfrow{grid-template-columns:1fr;}footer{padding:16px 18px;flex-direction:column;text-align:center;}
+  footer{padding:16px 18px;flex-direction:column;text-align:center;}
   .tg{grid-template-columns:repeat(3,1fr);}.svctl{flex-direction:column;align-items:stretch;}
   .svtabs{justify-content:center;}.svtab{padding:6px 12px;font-size:10px;}.svright{justify-content:center;}
   .pcards{grid-template-columns:1fr;}.soffer{flex-direction:column;text-align:center;}
-  .rvg{grid-template-columns:1fr;}.rvsummary{gap:24px;}
   .wa-float{bottom:18px;right:18px;}.wa-float a{width:50px;height:50px;}.wa-float svg{width:26px;height:26px;}.wa-float .wa-tooltip{display:none;}
+  .gform-iframe-wrap iframe{height:1000px;}
 }
 </style>
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-   <meta name="google-site-verification" content="6r73-8jTFzwjoEdXvCiIYxnlXZspN7t27DvrMVmRPdQ" />
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMXS9RZ8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMXS9RZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- NAV — updated order -->
 <nav>
   <a href="#hero" class="nb">Aditya<span>.</span></a>
   <ul class="nl">
@@ -344,7 +394,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <canvas id="globe-canvas"></canvas>
   <div class="hmesh"></div>
@@ -405,7 +454,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="divr"></div>
 
-<!-- ① ABOUT -->
 <section id="about">
   <div class="sw">
     <div class="shead">
@@ -463,7 +511,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="divr"></div>
 
-<!-- ② SERVICES & PRICING -->
 <section id="services">
   <div class="sw">
     <div class="shead">
@@ -582,7 +629,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="divr"></div>
 
-<!-- ③ EXPERIENCE -->
 <section id="experience">
   <div class="sw">
     <div class="shead">
@@ -620,7 +666,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="divr"></div>
 
-<!-- ④ PROJECTS -->
 <section id="projects">
   <div class="sw">
     <div class="shead">
@@ -658,7 +703,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="divr"></div>
 
-<!-- ⑤ ACHIEVEMENTS / CERTS -->
 <section id="achievements">
   <div class="sw">
     <div class="shead">
@@ -686,7 +730,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ═══ CONTACT SECTION ═══ -->
 <section id="contact">
   <div class="sw">
     <div class="shead">
@@ -694,6 +738,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="ssub" style="color:rgba(255,255,255,.35);text-align:right">Open to Data Analyst, AI Engineer, BI Developer roles and freelance work.</p>
     </div>
     <div class="ctg">
+
+      <!-- LEFT: Contact Info -->
       <div>
         <p class="cth">Ready to bring your <em>data to life?</em></p>
         <p class="ctsub">Whether you need a financial deep-dive, a predictive ML model, a BI dashboard, or a market research report — I deliver precision, speed and clarity.</p>
@@ -714,44 +760,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <form class="cform" id="CF">
-        <div class="cfrow">
-          <div class="cfg"><label>Your Name *</label><input type="text" id="fn" placeholder="Full name" required></div>
-          <div class="cfg"><label>Email Address *</label><input type="email" id="fe" placeholder="your@email.com" required></div>
+
+      <!-- RIGHT: Google Form -->
+      <div>
+        <div class="gform-wrap">
+          <!-- Header bar -->
+          <div class="gform-header">
+            <div class="gform-header-left">
+              <div class="gform-dots">
+                <div class="gform-dot gform-dot-r"></div>
+                <div class="gform-dot gform-dot-y"></div>
+                <div class="gform-dot gform-dot-g"></div>
+              </div>
+              <div class="gform-title">Send a Message</div>
+            </div>
+            <div class="gform-badge">
+              <div class="gform-badge-dot"></div>
+              Secured by Google
+            </div>
+          </div>
+
+          <!-- The iframe -->
+          <div class="gform-iframe-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdrovvLBClM49078K46Q8z56oXvYcIjjAgrUhPHFzj0gZjj7Q/viewform?embedded=true"
+              width="100%"
+              height="860"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              loading="lazy"
+              title="Contact Form — Aditya Digital Services">
+              Loading form…
+            </iframe>
+          </div>
+
+          <!-- Footer bar -->
+          <div class="gform-footer">
+            <span class="gform-footer-note">🔒 Responses go directly to Aditya's Google Sheets</span>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdrovvLBClM49078K46Q8z56oXvYcIjjAgrUhPHFzj0gZjj7Q/viewform"
+              target="_blank"
+              class="gform-footer-link">
+              Open in new tab ↗
+            </a>
+          </div>
         </div>
-        <div class="cfg"><label>Phone (Optional)</label><input type="tel" id="fp" placeholder="+91 XXXXX XXXXX"></div>
-        <div class="cfg">
-          <label>I'm looking for *</label>
-          <select id="ft" required>
-            <option value="">Select a service or role...</option>
-            <optgroup label="── Hire Me (Roles)"><option>Data Analyst (Full-time / Contract)</option><option>AI / ML Engineer Role</option><option>Business Intelligence Developer</option></optgroup>
-            <optgroup label="── Freelance Services"><option>Data Visualization &amp; Dashboard</option><option>Market Research &amp; Analytics Report</option><option>Business Strategy &amp; GTM Consulting</option><option>Python / ML Project Development</option></optgroup>
-            <optgroup label="── Website Development"><option>Basic Portfolio Website</option><option>Professional Portfolio Website</option><option>Doctor / CA Pro Website</option><option>Business Website</option><option>E-Commerce Website</option></optgroup>
-            <optgroup label="── SaaS &amp; Web Apps"><option>SaaS MVP Development</option><option>SaaS Professional Platform</option><option>SaaS Enterprise Solution</option><option>Starter Web App Development</option><option>Advanced Web App Development</option><option>Enterprise Web Solution</option></optgroup>
-            <optgroup label="── Support"><option>Monthly Maintenance &amp; Support</option><option>Other — Let's Discuss</option></optgroup>
-          </select>
-        </div>
-        <div class="google-form-wrapper" style="
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  background: rgba(255,255,255,0.05);
-  padding: 8px;
-">
- 
-</div>
-        <div class="cfg"><label>Your Message *</label><textarea id="fm" placeholder="Tell me about your project, role, timeline..." required></textarea></div>
-        <button type="submit" class="btsend" id="SB">Send Message →</button>
-        <div class="fmsg" id="FM"></div>
-      </form>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="fb">Aditya Kumar <span>Roy</span></div>
   <div class="fc">© 2026 · Data Analyst &amp; AI Professional · Barrackpore, Kolkata, India</div>
@@ -764,7 +824,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <div class="wa-float">
   <span class="wa-tooltip">Chat on WhatsApp</span>
   <a href="https://wa.me/919331488999?text=Hello%20Aditya,%20I%20found%20your%20professional%20website%20services%20through%20LinkedIn%20and%20would%20like%20to%20connect%20regarding%20website%20development.%20Kindly%20share%20more%20details." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
@@ -800,17 +859,6 @@ function drawQR(id,px){
 }
 drawQR('qr1',68);drawQR('qr2',84);
 
-/* CONTACT FORM */
-document.getElementById('CF').addEventListener('submit',async function(e){
-  e.preventDefault();
-  var SB=document.getElementById('SB'),FM=document.getElementById('FM');
-  var name=document.getElementById('fn').value,email=document.getElementById('fe').value,phone=document.getElementById('fp').value,type=document.getElementById('ft').value,msg=document.getElementById('fm').value;
-  SB.textContent='Sending...';SB.disabled=true;FM.className='fmsg';FM.style.display='none';
-  try{var res=await fetch('https://formspree.io/f/xwvnjbdn',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,phone,type,message:msg,_subject:'Portfolio Contact: '+type+' — '+name})});if(res.ok){FM.textContent='✓ Message sent! Aditya will reply within 24 hours.';FM.className='fmsg ok';this.reset();}else throw new Error();}
-  catch(e){var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nService: '+type+'\n\nMessage:\n'+msg;window.location.href='mailto:adityaroy83061@gmail.com?subject='+encodeURIComponent('Portfolio Contact: '+type)+'&body='+encodeURIComponent(body);FM.textContent='Opening your email client...';FM.className='fmsg ok';}
-  finally{SB.textContent='Send Message →';SB.disabled=false;}
-});
-
 /* SERVICES FILTER & CURRENCY */
 (function(){
   var tabs=document.querySelectorAll('.svtab'),cards=document.querySelectorAll('.prc'),curSel=document.getElementById('curSel');
@@ -820,7 +868,7 @@ document.getElementById('CF').addEventListener('submit',async function(e){
   document.querySelectorAll('.prcta').forEach(function(b){b.addEventListener('click',function(){var s=this.getAttribute('data-svc');if(s){var sel=document.getElementById('ft');if(sel)for(var i=0;i<sel.options.length;i++)if(sel.options[i].text===s){sel.selectedIndex=i;break;}}});});
 })();
 
-/* GLOBE — Sky Blue Theme */
+/* GLOBE */
 (function(){
   var canvas=document.getElementById('globe-canvas');if(!canvas)return;
   var ctx=canvas.getContext('2d');
@@ -837,13 +885,7 @@ document.getElementById('CF').addEventListener('submit',async function(e){
   for(var i=0;i<LNGS;i++)lngs.push(i/LNGS*Math.PI*2);
   for(var i=1;i<=LATS;i++)lats.push(i/(LATS+1)*Math.PI);
   function proj(theta,phi,r){var x=r*Math.sin(phi)*Math.cos(theta+rotAngle),y=r*Math.cos(phi),z=r*Math.sin(phi)*Math.sin(theta+rotAngle);return{x:CX+x,y:CY+y,z:z};}
-  function triggerExplode(){
-    explodeParticles=[];
-    /* Sky blue explosion palette */
-    var cols=['#1A78C2','#2E90DD','#4FC3F7','#00BCD4','#26C6DA','#0D2137','#90C8F0','#5BA3D4','#ffffff'];
-    for(var i=0;i<200;i++){var a=Math.random()*Math.PI*2,spd=1.5+Math.random()*9;explodeParticles.push({x:CX+(Math.random()-.5)*R*1.2,y:CY+(Math.random()-.5)*R*1.2,vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,size:1+Math.random()*4.5,color:cols[Math.floor(Math.random()*cols.length)],alpha:1,decay:0.014+Math.random()*0.018});}
-    exploding=true;
-  }
+  function triggerExplode(){explodeParticles=[];var cols=['#1A78C2','#2E90DD','#4FC3F7','#00BCD4','#26C6DA','#0D2137','#90C8F0','#5BA3D4','#ffffff'];for(var i=0;i<200;i++){var a=Math.random()*Math.PI*2,spd=1.5+Math.random()*9;explodeParticles.push({x:CX+(Math.random()-.5)*R*1.2,y:CY+(Math.random()-.5)*R*1.2,vx:Math.cos(a)*spd,vy:Math.sin(a)*spd,size:1+Math.random()*4.5,color:cols[Math.floor(Math.random()*cols.length)],alpha:1,decay:0.014+Math.random()*0.018});}exploding=true;}
   function draw(){
     ctx.clearRect(0,0,W,H);time++;
     if(isOver&&!wasOver)triggerExplode();
@@ -851,8 +893,7 @@ document.getElementById('CF').addEventListener('submit',async function(e){
     wasOver=isOver;
     var gA=1;if(exploding){var alive=explodeParticles.filter(function(p){return p.alpha>0;}).length;gA=Math.max(0,alive/200-0.2);}
     if(gA>0.01){
-      var g=ctx.createRadialGradient(CX,CY,R*.1,CX,CY,R*1.5);
-      g.addColorStop(0,'rgba(26,120,194,0.07)');g.addColorStop(.6,'rgba(13,33,55,0.05)');g.addColorStop(1,'rgba(0,0,0,0)');
+      var g=ctx.createRadialGradient(CX,CY,R*.1,CX,CY,R*1.5);g.addColorStop(0,'rgba(26,120,194,0.07)');g.addColorStop(.6,'rgba(13,33,55,0.05)');g.addColorStop(1,'rgba(0,0,0,0)');
       ctx.globalAlpha=gA;ctx.fillStyle=g;ctx.beginPath();ctx.arc(CX,CY,R*1.5,0,Math.PI*2);ctx.fill();
       lats.forEach(function(phi,li){var rR=R*Math.sin(phi),rY=CY+R*Math.cos(phi);ctx.beginPath();ctx.ellipse(CX,rY,rR,rR*0.14,0,0,Math.PI*2);ctx.strokeStyle='rgba(26,120,194,'+(0.09+li*0.015)+')';ctx.lineWidth=0.7;ctx.stroke();});
       lngs.forEach(function(lng){ctx.beginPath();var first=true;for(var i=0;i<=60;i++){var phi=i/60*Math.PI,p=proj(lng,phi,R);if(p.z<0){first=true;continue;}first?(ctx.moveTo(p.x,p.y),first=false):ctx.lineTo(p.x,p.y);}var a=0.04+(Math.sin(lng+rotAngle)+1)*0.03;ctx.strokeStyle='rgba(30,90,160,'+a+')';ctx.lineWidth=0.55;ctx.stroke();});
